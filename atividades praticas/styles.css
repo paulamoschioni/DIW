@@ -1,0 +1,35 @@
+.cabecalho-principal{
+background-color: rgb(249, 241, 242);
+
+}
+.cabecalho-principal p{
+    text-align: center;
+}
+
+
+.envelope-section img{
+align-items:end;
+
+}
+
+
+
+.sobre {
+background-image: url(images/bolinhas-desktop.png);
+background-size: 900px;
+
+}
+.sobre div{
+background-color: rgb(208, 74, 74) ;
+padding: 40px;
+margin: 100px;
+width: 500px;
+height: 150px;
+}
+.sobre p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.nav-menu{
+
+}
+
