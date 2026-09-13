@@ -1,35 +1,295 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+html, body, main{
+    height: 100%;
+}
 .cabecalho-principal{
-background-color: rgb(249, 241, 242);
+background-color: #f9f1f2;
 
 }
+
 .cabecalho-principal p{
     text-align: center;
+    
 }
 
+/*ENVELOPE*/
+.envelope-section{
+    display:flex;
+    justify-content: center;
+    padding-top:10%;
+    padding-bottom: 10%;
+}
 
 .envelope-section img{
-align-items:end;
+align-items:center;
+height: auto;
+    width: 32.9%;
+}
 
+/*SOBRE*/
+.sobre {
+position: relative;
+height: 100%;
+}
+.sobre img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
 
+.sobre div{
+background-color: white;
+padding: 7.32%;
+width: 51.2%;
+height: 39.1%;
+display: flow-root;
+position: absolute;
+top: 50%;
+ left: 50%; 
+ transform: translate(-50%, -50%);
+ border-radius: 8%;
+}
+ .sobre div {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 0.95;
+}
 
-.sobre {
-background-image: url(images/bolinhas-desktop.png);
-background-size: 900px;
-
+.sobre p{
+    font-size: 220%;
+}
+.sobre h1{
+    font-size: 400%; 
+}
+.sobre h2{
+    font-size:larger;
+    color: #e70ead
 }
 .sobre div{
-background-color: rgb(208, 74, 74) ;
-padding: 40px;
-margin: 100px;
-width: 500px;
-height: 150px;
+    text-align: center;
 }
-.sobre p{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.sobre span{
+    font-size: 60%;
 }
+.sobre .personaliza{
+      font-family: 'Alex Brush', cursive;
+     font-size: 1.8em;
+    
+}
+
+/*NAV*/
+.nav-menu {
+position: relative;
+height: 100%;  /*ocupa a altura da tela para conseguir fixar logos*/
+}
+.nav-menu > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nwLOGO,.tpLOGO, .cmntLOGO{
+  position: absolute;
+  width: 7%;
+  transform: translate(-40%, -50%);
+  z-index: 2;
+}
+.nwLOGO{
+  top: 25%;
+   left: 58%;
+}
+.tpLOGO{
+  top: 50%;
+   left: 59%;
+}
+.cmntLOGO{
+  top: 73%;
+   left: 60%;
+}
+#network div, #tips div, #comunities div{
+font-size: medium;
+position: absolute;
+line-height: 91.9%;
+}
+#network div{
+top: 19%; 
+left: 63%; 
+transform: translate(-50%, -50%);
+transform: rotate(-4deg);
+}
+#tips div{
+top: 42%; 
+left: 64%; 
+transform: translate(-50%, -51%);
+transform: rotate(-4deg);
+}
+#comunities div{
+top:64%;
+left: 65%;
+transform: translate(-50%, -50%);
+transform: rotate(-4deg);
+}
+#network span, #tips span, #comunities span{
+    font-size: large;
+}
+
 .nav-menu{
+    font-family: 'PT Serif', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 0.95;
+}
+
+
+
+/* ADAPTAÇÕES VIEWPORT*/
+@media (max-width: 346px){
+   .nav-menu nav{
+    width: 50%;
+    height: auto;
+  }
+  #network div{
+    top: 30%;
+    left: 50%;
+    
+  }
+  #tips div{
+    top: 38%;
+    left: 52%
+  }
+  #comunities div{
+    top: 58%;
+    left: 54%
+  }
+}
+@media (max-width: 400px) {
+  sobre div {
+    width: 85%;
+    height: auto;
+    padding: 6%;
+  }
+
+    .sobre h1 {
+    font-size: 250%;
+    }
+
+  .sobre p {
+    font-size: 130%;
+  }
+  .nwLOGO, .tpLOGO, .cmntLOGO {
+    display: none;    /*faz os icones redondos sumirem na versao mobile*/
+  }
+  .envelope-section img{
+    height: auto;
+    width: 70%;
+    align-items: center;
+  }
+  .bg-desktop{
+    display: none;
+  }
+  .bg-mobile{
+    display: block;
+  }
+  .nav-menu nav{
+    width: 50%;
+    height: auto;
+  }
+  #network div{
+    top: 15%;
+    left: 50%;
+    
+  }
+  #tips div{
+    top: 38%;
+    left: 52%
+  }
+  #comunities div{
+    top: 58%;
+    left: 54%
+  }
+  #comunities div, #tips div,#network div{
+    font-size: 70%;
+  }
+  #comunities span, #tips span,#network span{
+    font-size: 90%;
+  }
+}
+@media (min-width: 401px) and (max-width: 768px){
+  sobre div {
+    width: 85%;
+    height: auto;
+    padding: 6%;
+  }
+
+    .sobre h1 {
+    font-size: 250%;
+    }
+
+  .sobre p {
+    font-size: 130%;
+  }
+  /*.nwLOGO, .tpLOGO, .cmntLOGO {
+    display: none;    /*faz os icones redondos sumirem na versao mobile
+  } */
+  .envelope-section img{
+    height: auto;
+    width: 70%;
+    align-items: center;
+  }
+  .bg-desktop{
+    display: block;
+  }
+  .bg-mobile{
+    display: none;
+  }
+  #comunities div, #tips div,#network div{
+    font-size: 80%;
+  }
+  #comunities span, #tips span,#network span{
+    font-size: 90%;
+  }
+ 
 
 }
 
+@media (min-width: 1200px) {
+ 
+  .envelope-section img {
+    max-width: 600px; /* nunca cresce além disso, mesmo em telas gigantes */
+  }
+  .bg-mobile{
+    display: none;
+  }
+  .bg-desktop{
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .sobre div {
+    width: 65%;
+  }
+  .sobre h1 {
+    font-size: 320%;
+  }
+  .sobre p {
+    font-size: 170%;
+  }
+
+ .bg-mobile {
+    display: none; 
+  }
+
+}
