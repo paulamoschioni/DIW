@@ -154,31 +154,8 @@ transform: rotate(-4deg);
 
 
 /* ADAPTAÇÕES VIEWPORT*/
-@media (max-width: 346px){
-   .nav-menu nav{
-    width: 50%;
-    height: auto;
-  }
-  #network div{
-    top: 30%;
-    left: 50%;
-    
-  }
-  #tips div{
-    top: 38%;
-    left: 52%
-  }
-  #comunities div{
-    top: 58%;
-    left: 54%
-  }
-}
-@media (max-width: 400px) {
-  sobre div {
-    width: 85%;
-    height: auto;
-    padding: 6%;
-  }
+@media (max-width: 600px){  /*cobre mobiles*/
+
 
     .sobre h1 {
     font-size: 250%;
@@ -195,101 +172,82 @@ transform: rotate(-4deg);
     width: 70%;
     align-items: center;
   }
-  .bg-desktop{
-    display: none;
-  }
-  .bg-mobile{
-    display: block;
-  }
-  .nav-menu nav{
-    width: 50%;
-    height: auto;
-  }
   #network div{
-    top: 15%;
-    left: 50%;
-    
-  }
-  #tips div{
-    top: 38%;
-    left: 52%
-  }
-  #comunities div{
-    top: 58%;
-    left: 54%
-  }
-  #comunities div, #tips div,#network div{
-    font-size: 70%;
-  }
-  #comunities span, #tips span,#network span{
-    font-size: 90%;
-  }
+  top: 22%; 
+left: 64%; 
 }
-@media (min-width: 401px) and (max-width: 768px){
-  sobre div {
-    width: 85%;
-    height: auto;
-    padding: 6%;
-  }
-
-    .sobre h1 {
-    font-size: 250%;
-    }
-
-  .sobre p {
-    font-size: 130%;
-  }
-  /*.nwLOGO, .tpLOGO, .cmntLOGO {
-    display: none;    /*faz os icones redondos sumirem na versao mobile
-  } */
-  .envelope-section img{
-    height: auto;
-    width: 70%;
-    align-items: center;
-  }
-  .bg-desktop{
-    display: block;
-  }
-  .bg-mobile{
-    display: none;
-  }
-  #comunities div, #tips div,#network div{
-    font-size: 80%;
-  }
-  #comunities span, #tips span,#network span{
-    font-size: 90%;
-  }
- 
+#tips div{
+top: 42%; 
+left: 66%; 
+}
+#comunities div{
+top:60%;
+left: 68%;
+}
 
 }
 
-@media (min-width: 1200px) {
- 
-  .envelope-section img {
-    max-width: 600px; /* nunca cresce além disso, mesmo em telas gigantes */
-  }
-  .bg-mobile{
-    display: none;
-  }
-  .bg-desktop{
-    display: block;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1023px){
 
   .sobre div {
-    width: 65%;
-  }
-  .sobre h1 {
-    font-size: 320%;
-  }
-  .sobre p {
-    font-size: 170%;
+    width: 70%;
+    height: auto;
+    padding: 7%;
   }
 
- .bg-mobile {
-    display: none; 
+  .sobre h1 {
+    font-size: 250%;
+  }
+
+  .sobre h2 {
+    font-size: 100%;
+  }
+
+  .sobre p{
+    font-size: 140%;
+  }
+
+  .sobre .personaliza{
+    font-size: 1.9em;
+  }
+
+  .sobre span{
+    font-size: 70%;
+  }
+  #network div{
+  top: 22%; 
+left: 64%; 
+}
+#tips div{
+top: 42%; 
+left: 66%; 
+}
+#comunities div{
+top:60%;
+left: 67%;
+}
+.nwLOGO{
+  top: 30%;
+}
+.tpLOGO{
+  top: 48%;
+}
+.cmntLOGO{
+  top: 67%;
+}
+}
+
+@media (min-width: 1024px){
+ .sobre h1 {
+    font-size: 250%;
+  }
+
+  .sobre h2 {
+    font-size: 100%;
+  }
+
+  .sobre p{
+    font-size: 200%;
   }
 
 }
