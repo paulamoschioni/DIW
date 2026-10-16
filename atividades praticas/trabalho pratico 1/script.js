@@ -123,5 +123,11 @@ const dados = {
     ]
 };
 
+// CARROSSEL
+function montarCarrossel(){
+    const container = document.getElementById("carrossel-itens");
+    console.log(container);
+}
+montarCarrossel();
 
 

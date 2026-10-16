@@ -1,0 +1,24 @@
+/* Trecho original do vanilla version/styles.css */
+
+/*ENVELOPE*/
+.envelope-section{
+    display:flex;
+    justify-content: center;
+    padding-top:10%;
+    padding-bottom: 10%;
+}
+
+.envelope-section img{
+align-items:center;
+height: auto;
+    width: 80%;
+}
+
+/* ADAPTAÇÕES VIEWPORT*/
+@media (max-width: 600px){  /*cobre mobiles*/
+  .envelope-section img{
+    height: auto;
+    width: 70%;
+    align-items: center;
+  }
+}

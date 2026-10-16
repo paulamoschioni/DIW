@@ -15,20 +15,6 @@ background-color: #f9f1f2;
     
 }
 
-/*ENVELOPE*/
-.envelope-section{
-    display:flex;
-    justify-content: center;
-    padding-top:10%;
-    padding-bottom: 10%;
-}
-
-.envelope-section img{
-align-items:center;
-height: auto;
-    width: 80%;
-}
-
 /*SOBRE*/
 .sobre {
 position: relative;
@@ -166,11 +152,6 @@ transform: rotate(-4deg);
   }
   .nwLOGO, .tpLOGO, .cmntLOGO {
     display: none;    /*faz os icones redondos sumirem na versao mobile*/
-  }
-  .envelope-section img{
-    height: auto;
-    width: 70%;
-    align-items: center;
   }
   #network div{
   top: 22%; 
