@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swit: Support Women in tech</title>
+    <!-- NOVO: CSS do Bootstrap (antes do seu, para o seu ter prioridade) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="styles.css">
      <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,19 +17,39 @@
 
     <header class = "cabecalho-principal">
         <p>Support Women In Tech </p> <!-- LOGO -->
+        <!-- NOVO: links do cabeçalho -->
+        <nav class="menu-topo">
+            <a href="#destaques">Destaques</a>
+            <a href="#categorias">Dicas</a>
+            <a href="#sobre-autora">Sobre</a>
+        </nav>
     </header>
     <main>
         <section id="destaques">
-            <div id="carrosselDestaques" class="carousel slide" >
+        <div class="container">
+            <div id="carrosselDestaques" class="carousel slide">
+                <div class="carousel-inner" id="carrossel-itens">
+                </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+        <section id="categorias">
+            <div class="container">
+            <h2>Explore as dicas</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="cards-categorias">
+            </div>
             </div>
         </section>
 
         <!-- Segunda pagina: Informacoes do site + frase provocativa-->
         <section class = "sobre">
-            <img src="../images/bolinhas_desktop.png" alt= " ">
+            <img src="images/bolinhas_desktop.png" alt= " ">
            <div>
             
             <h1>SWIT <br></h1>
@@ -40,11 +62,11 @@
 
         <!-- Terceira pagina: com os navs e direcionamentos das paginas-->
          <section class = "nav-menu">
-            <img src="../images/fundodesktop.png" alt= " " class="bg-desktop">
+            <img src="images/fundodesktop.png" alt= " " class="bg-desktop">
             <!-- <img src="../images/fundomobile.jpeg" alt="" class="bg-mobile"> -->
         <nav>
             <article id="network">
-            <img src="../images/logo-network.png" alt="" class="nwLOGO">
+            <img src="images/logo-network.png" alt="" class="nwLOGO">
                 <div>
                     <a href="network.html"><span class="linkN">NETWORK: </span> </a><br>
                   Crie seu perfil 
@@ -57,7 +79,7 @@
             </article>
 
             <article id="tips">  
-                <img src="../images/logo-tips.png" alt="Ícones tips" class="tpLOGO">
+                <img src="images/logo-tips.png" alt="Ícones tips" class="tpLOGO">
                 <div>
                     <a href="tips.html"><span class="linkT">TIPS: </span></a><br>
                     Dicas sobre recursos <br> 
@@ -68,7 +90,7 @@
             </article>
             
             <article id="comunities">
-                <img src="../images/logo-community.png" alt="Ícones comu" class="cmntLOGO">
+                <img src="images/logo-community.png" alt="Ícones comu" class="cmntLOGO">
                 <div>
                 <a href="comunities.html"><span class="linkC">COMMUNITY: </span></a><br>
                   Escreva um pensa- <br>mento,<br>
@@ -80,14 +102,37 @@
 
         </nav>
     </section>
+
+<!--Seção 3 do enunciado - sobre a autora -->
+        <section id="sobre-autora">
+    <div class="container">
+        <h2>Quem criou o SWIT</h2>
+        <div class="row align-items-center">
+            <div class="col-12 col-md-5 text-center">
+                <img src="images/carteirinha-recortada.png" alt="Carteirinha de Paula Moschioni" class="img-fluid carteirinha">
+            </div>
+            <div class="col-12 col-md-7">
+                <p><strong>Curso:</strong> Ciência da Computação – PUC Minas</p>
+                    <p>Esse site foi criado com o objetivo de ser um ponto de apoio e de engajamento pessoal de mulheres na área da tecnologia que é, muitas vezes, um espaço pouco acolhedor e pouco representativo para mulheres. </p>
+                    <p>
+                       
+                    </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
     </main>
 
     <footer class="rodape-site">
-        <p><a href="https://www.linkedin.com/in/paulamoschioni">LinkedIn</a> · <a href="https://www.instagram.com/paula.moschioni/">Instagram</a>
-        <a href="https://github.com/paulamoschioni">GitHub</a>
+        <p><a href="https://www.linkedin.com/in/paulamoschioni">LinkedIn</a> · <a href="https://www.instagram.com/paula.moschioni/">Instagram</a> ·
+            <a href="https://github.com/paulamoschioni">GitHub</a>
         </p>
     </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 
+</body>
 </html>

@@ -46,8 +46,8 @@ const dados = {
             titulo: "Women in Tech Global Conference",
             descriçao: "Organizada pela WomenTech Network, é uma das maiores conferências internacionais de mulheres em tecnologia. O evento é híbrido, então dá para assistir online de qualquer lugar do mundo, com palestras sobre carreira, IA, desenvolvimento e liderança.",
             imagem:"https://women-in-tech.org/wp-content/uploads/2024/06/womenintech-global-summit-2024-980x551.jpg",
-            ref: "https://women-in-tech.org/women-in-tech-global-summit-2024/"
-            destaque: true;
+            ref: "https://women-in-tech.org/women-in-tech-global-summit-2024/",
+            destaque: true
         },
         {
             dicaId: 2,
@@ -126,8 +126,129 @@ const dados = {
 // CARROSSEL
 function montarCarrossel(){
     const container = document.getElementById("carrossel-itens");
-    console.log(container);
+const dicasDestaque = dados.dicas.filter(dica => dica.destaque);
+
+let html = "";
+
+
+dicasDestaque.forEach((dica, indice) => {
+    const ativo = indice === 0 ? "active" : "";
+
+    html += `
+            <div class="carousel-item ${ativo}">
+                <a href="detalhes.html?id=${dica.areaId}">
+                    <img src="${dica.imagem}" class="d-block w-100" alt="${dica.titulo}">
+                </a>
+                <div class="carousel-caption">
+                    <h3>${dica.titulo}</h3>
+                    <p>${dica.descriçao}</p>
+                </div>
+            </div>
+    `
+});
+
+container.innerHTML = html;
 }
-montarCarrossel();
 
 
+// MONTANDO OS CARDS
+function montarCards() {
+    const container = document.getElementById("cards-categorias");
+
+    let html = "";
+
+{dados.categorias.forEach(categorias => {
+            html += `
+            <div class="col">
+                <div class="card h-100">
+                    <a href="detalhes.html?id=${categorias.id}">
+                        <img src="${categorias.imagemPrincipal}" class="card-img-top" alt="${categorias.nome}">
+                    </a>
+                    <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="detalhes.html?id=${categorias.id}" class="stretched-link">${categorias.nome}</a>
+                            </h5>
+                        <p class="card-text">${categorias.descricao}</p>
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+    container.innerHTML = html;
+}
+
+//PARTE DE DETALHES.HTML
+function montarDetalhes() {
+    const params = new URLSearchParams(window.location.search);
+    const id = Number(params.get("id"));
+
+    const categoria = dados.categorias.find(cat => cat.id === id);                 // acha A categoria
+    const dicasDaCategoria = dados.dicas.filter(dica => dica.areaId === id);       // acha AS dicas dela
+        const infoContainer = document.getElementById("info-categoria");
+
+    infoContainer.innerHTML = `
+        <!-- banner com a imagem da categoria de fundo -->
+        <div class="detalhe-banner" style="background-image: url('${categoria.imagemPrincipal}')">
+            <div class="detalhe-banner-texto">
+                <span class="detalhe-etiqueta">Categoria</span>
+                <h1>${categoria.nome}</h1>
+                <p>${categoria.descricao}</p>
+            </div>
+        </div>
+
+        <p class="detalhe-conteudo">${categoria.conteudo}</p>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <div class="detalhe-info">
+                    <h5>Para quem é</h5>
+                    <p>${categoria.publico}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="detalhe-info">
+                    <h5>Como aproveitar</h5>
+                    <p>${categoria.comoAproveitar}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="detalhe-info">
+                    <h5>Dicas nesta categoria</h5>
+                    <p class="detalhe-numero">${dicasDaCategoria.length}</p>
+                </div>
+            </div>
+        </div>`;
+
+    const dicasContainer = document.getElementById("dicas-categoria");
+
+    let html = "";
+
+    dicasDaCategoria.forEach(dica => {
+        html += `
+            <div class="col">
+                <div class="card h-100 card-dica">
+                    <img src="${dica.imagem}" class="card-img-top" alt="${dica.titulo}">
+                    <div class="card-body">
+                        <h5 class="card-title">${dica.titulo}</h5>
+                        <p class="card-text">${dica.descriçao}</p>
+                        ${dica.ref ? `<a href="${dica.ref}" target="_blank" class="btn btn-primary">Acessar</a>` : ""}
+                    </div>
+                </div>
+            </div>`
+    });
+
+    dicasContainer.innerHTML = html;
+}
+
+//chamando funcoes
+if (document.getElementById("carrossel-itens")) {
+    montarCarrossel();
+}
+
+if (document.getElementById("cards-categorias")) {
+    montarCards();
+}
+if (document.getElementById("info-categoria")) {
+    montarDetalhes();
+}

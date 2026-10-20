@@ -1,0 +1,607 @@
+*{
+    margin:0%;
+    padding:0%;
+}
+html, body{
+    height: 100%;
+}
+html{
+    scroll-behavior: smooth; /*rolagem suave ao clicar nos links do menu*/
+}
+
+/*HEADER*/
+.cabecalho-principal{
+    position: sticky;  /*header fica fixo no topo ao rolar*/
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 6%;
+    background-color: #f9f1f2;
+    border-bottom: 1px solid #f0d6dc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    font-family: 'PT Serif', serif;
+}
+
+.cabecalho-principal p{
+    margin: 0;
+    font-family: 'Alex Brush', cursive; /*mesma fonte de "build the future"*/
+    font-size: 2rem; /*cursiva precisa ser maior para ficar legivel*/
+    font-weight: 400;
+    line-height: 1;
+    color: #222;
+}
+
+.menu-topo{
+    display: flex;
+    gap: 28px;
+}
+
+.menu-topo a{
+    position: relative;
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+/*linha rosa que aparece embaixo do link no hover*/
+.menu-topo a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #e70ead;
+    transition: width 0.25s;
+}
+
+.menu-topo a:hover{
+    color: #e70ead;
+}
+
+.menu-topo a:hover::after{
+    width: 100%;
+}
+
+/*CATEGORIAS - cards arredondados*/
+#cards-categorias .card{
+    border-radius: 16px;
+    overflow: hidden;   /*faz a imagem do topo seguir as bordas arredondadas*/
+}
+
+#categorias{
+    padding-bottom: 48px;   /*espaco entre os cards e o fundo de bolinhas*/
+}
+
+/*CARROSSEL - espaco abaixo do header e tamanho menor*/
+#destaques{
+    padding-top: 32px;        /*distancia entre o header e o carrossel*/
+}
+
+#carrosselDestaques{
+    max-width: 900px;         /*deixa o carrossel mais estreito*/
+    margin: 0 auto;           /*centraliza na tela*/
+    border-radius: 12px;
+    overflow: hidden;         /*faz a imagem respeitar as bordas arredondadas*/
+}
+
+#carrosselDestaques .carousel-item img{
+    height: 420px;            /*altura fixa menor*/
+    object-fit: cover;        /*corta a imagem sem distorcer*/
+}
+
+/*CARROSSEL - setas mais visiveis*/
+#carrosselDestaques .carousel-control-prev,
+#carrosselDestaques .carousel-control-next{
+    opacity: 1;               /*bootstrap deixa as setas meio transparentes*/
+    width: 8%;
+}
+
+#carrosselDestaques .carousel-control-prev-icon,
+#carrosselDestaques .carousel-control-next-icon{
+    width: 48px;
+    height: 48px;
+    background-color: rgba(8, 0, 3, 0.55); /*circulo escuro atras da seta*/
+    background-size: 50%;                 /*seta menor dentro do circulo*/
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+#carrosselDestaques .carousel-control-prev:hover .carousel-control-prev-icon,
+#carrosselDestaques .carousel-control-next:hover .carousel-control-next-icon{
+    background-color: #e70ead;            /*fica rosa ao passar o mouse*/
+}
+
+/*CARROSSEL - caixa de texto legivel sobre a imagem*/
+.carousel-caption{
+    background-color: rgba(8, 0, 3, 0.55); /*preto com opacidade baixa*/
+    backdrop-filter: blur(4px);            /*desfoca a imagem atras da caixa*/
+    border-radius: 12px;
+    padding: 16px 24px;
+    bottom: 2rem;
+
+}
+
+.carousel-caption h3{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.carousel-caption p{
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/*compensa a altura do header fixo ao pular para uma secao*/
+section[id]{
+    scroll-margin-top: 70px;
+}
+
+/*SOBRE*/
+.sobre {
+position: relative;
+height: 100vh;
+}
+
+/*faixa que vai do branco ao transparente, suavizando a entrada das bolinhas*/
+.sobre::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+  z-index: 1;   /*fica por cima da imagem de bolinhas*/
+}
+
+.sobre div{
+  z-index: 2;   
+}
+.sobre img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+.sobre div{
+background-color: white;
+padding: 7.32%;
+width: 51.2%;
+height: auto; /*cresce junto com o texto, sem vazar*/
+display: flow-root;
+position: absolute;
+top: 50%;
+ left: 50%; 
+ transform: translate(-50%, -50%);
+ border-radius: 8%;
+}
+ .sobre div {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 0.95;
+}
+
+.sobre p{
+    font-size: 220%;
+}
+.sobre h1{
+    font-size: 400%; 
+}
+.sobre h2{
+    font-size:larger;
+    color: #e70ead
+}
+.sobre div{
+    text-align: center;
+}
+.sobre span{
+    font-size: 60%;
+}
+.sobre .personaliza{
+      font-family: 'Alex Brush', cursive;
+     font-size: 1.8em;
+    
+}
+
+/*NAV*/
+.nav-menu {
+position: relative;
+height: 100vh;  /*ocupa a altura da tela para conseguir fixar logos*/
+}
+.nav-menu > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nwLOGO,.tpLOGO, .cmntLOGO{
+  position: absolute;
+  width: 7%;
+  transform: translate(-40%, -50%);
+  z-index: 2;
+}
+.nwLOGO{
+  top: 25%;
+   left: 58%;
+}
+.tpLOGO{
+  top: 50%;
+   left: 59%;
+}
+.cmntLOGO{
+  top: 73%;
+   left: 60%;
+}
+#network div, #tips div, #comunities div{
+font-size: medium;
+position: absolute;
+line-height: 91.9%;
+}
+#network div{
+top: 19%; 
+left: 63%; 
+transform: translate(-50%, -50%);
+transform: rotate(-4deg);
+}
+#tips div{
+top: 42%; 
+left: 64%; 
+transform: translate(-50%, -51%);
+transform: rotate(-4deg);
+}
+#comunities div{
+top:64%;
+left: 65%;
+transform: translate(-50%, -50%);
+transform: rotate(-4deg);
+}
+#network span, #tips span, #comunities span{
+    font-size: large;
+}
+
+.nav-menu{
+    font-family: 'PT Serif', serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 0.95;
+}
+
+
+
+/*PAGINA DE DETALHES*/
+.pagina-detalhes{
+    padding: 32px 0 56px;     /*espaco abaixo do header e antes do rodape*/
+    background-color: #fdf8f9;
+}
+
+/*banner: imagem da categoria de fundo com o texto por cima*/
+.detalhe-banner{
+    position: relative;
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;    /*texto fica na parte de baixo do banner*/
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/*camada escura em degrade para o texto branco ficar legivel*/
+.detalhe-banner::before{
+    content: "";
+    position: absolute;
+    inset: 0;                 /*ocupa o banner inteiro*/
+    background: linear-gradient(to top, rgba(8, 0, 3, 0.85), rgba(8, 0, 3, 0.15));
+}
+
+.detalhe-banner-texto{
+    position: relative;       /*fica por cima da camada escura*/
+    padding: 40px;
+    max-width: 720px;
+    color: #ffffff;
+}
+
+.detalhe-etiqueta{
+    display: inline-block;
+    padding: 4px 14px;
+    margin-bottom: 12px;
+    border-radius: 999px;     /*formato de pilula*/
+    background-color: rgba(231, 14, 173, 0.45);  /*mesmo rosa #e70ead, mais transparente*/
+    backdrop-filter: blur(4px);                  /*desfoca a foto atras da etiqueta*/
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.detalhe-banner-texto h1{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-bottom: 8px;
+}
+
+.detalhe-banner-texto p{
+    margin: 0;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+/*texto explicativo da categoria*/
+.detalhe-conteudo{
+    max-width: 820px;
+    margin: 36px 0 28px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    border-left: 4px solid #e70ead;   /*linha rosa ao lado do texto*/
+    padding-left: 20px;
+}
+
+/*caixinhas "para quem e", "como aproveitar" e "dicas nesta categoria"*/
+.detalhe-info{
+    height: 100%;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #f0d6dc;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.detalhe-info h5{
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e70ead;
+    margin-bottom: 10px;
+}
+
+.detalhe-info p{
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+.detalhe-numero{
+    font-family: 'PT Serif', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1 !important;
+}
+
+/*secao dos cards de dicas*/
+.secao-dicas{
+    margin-top: 56px;
+}
+
+.titulo-secao{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.card-dica{
+    border: 1px solid #f0d6dc;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+/*card sobe um pouco ao passar o mouse*/
+.card-dica:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-dica .card-img-top{
+    height: 180px;            /*imagem menor e com altura igual em todos os cards*/
+    object-fit: cover;
+}
+
+.card-dica .card-body{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.card-dica .card-title{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.card-dica .card-text{
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #555;
+}
+
+.card-dica .btn{
+    margin-top: auto;         /*empurra o botao para o fim do card*/
+    align-self: flex-start;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 999px;
+    background-color: #e70ead;
+    font-weight: 700;
+}
+
+.card-dica .btn:hover{
+    background-color: #b8098a;  /*rosa mais escuro no hover*/
+}
+
+.link-voltar{
+    display: inline-block;
+    margin-top: 40px;
+    color: #e70ead;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-voltar:hover{
+    text-decoration: underline;
+}
+
+/*SOBRE A AUTORA - carteirinha ao lado do texto*/
+.carteirinha{
+    width: 100%;              /*ocupa toda a coluna*/
+    max-width: 340px;         /*limite para nao ficar gigante nem borrada*/
+    margin-bottom: 16px;      /*espaco quando a imagem fica em cima do texto no celular*/
+}
+
+/*RODAPE*/
+.rodape-site{
+    padding: 24px;
+    text-align: center;
+    background-color: #f9f1f2;
+    border-top: 1px solid #f0d6dc;
+}
+
+.rodape-site p{
+    margin: 0;
+}
+
+.rodape-site a{
+    color: #222;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.rodape-site a:hover{
+    color: #e70ead;
+}
+
+/* ADAPTAÇÕES VIEWPORT*/
+@media (max-width: 600px){  /*cobre mobiles*/
+
+  .cabecalho-principal{
+    flex-direction: column;  /*nome em cima, links embaixo*/
+    gap: 8px;
+    padding: 10px 4%;
+  }
+  .menu-topo{
+    gap: 18px;
+  }
+  #carrosselDestaques .carousel-item img{
+    height: 240px;  /*carrossel mais baixo no celular*/
+  }
+
+  .detalhe-banner{
+    min-height: 260px;
+  }
+  .detalhe-banner-texto{
+    padding: 24px;
+  }
+  .detalhe-banner-texto h1{
+    font-size: 1.8rem;
+  }
+
+
+    .sobre h1 {
+    font-size: 250%;
+    }
+
+  .sobre p {
+    font-size: 130%;
+  }
+  .nwLOGO, .tpLOGO, .cmntLOGO {
+    display: none;    /*faz os icones redondos sumirem na versao mobile*/
+  }
+  #network div{
+  top: 22%; 
+left: 64%; 
+}
+#tips div{
+top: 42%; 
+left: 66%; 
+}
+#comunities div{
+top:60%;
+left: 68%;
+}
+
+}
+
+@media (min-width: 601px) and (max-width: 1023px){
+
+  .sobre div {
+    width: 70%;
+    height: auto;
+    padding: 7%;
+  }
+
+  .sobre h1 {
+    font-size: 250%;
+  }
+
+  .sobre h2 {
+    font-size: 100%;
+  }
+
+  .sobre p{
+    font-size: 140%;
+  }
+
+  .sobre .personaliza{
+    font-size: 1.9em;
+  }
+
+  .sobre span{
+    font-size: 70%;
+  }
+  #network div{
+  top: 22%; 
+left: 64%; 
+}
+#tips div{
+top: 42%; 
+left: 66%; 
+}
+#comunities div{
+top:60%;
+left: 67%;
+}
+.nwLOGO{
+  top: 30%;
+}
+.tpLOGO{
+  top: 48%;
+}
+.cmntLOGO{
+  top: 67%;
+}
+}
+
+@media (min-width: 1024px){
+ .sobre h1 {
+    font-size: 250%;
+  }
+
+  .sobre h2 {
+    font-size: 100%;
+  }
+
+  .sobre p{
+    font-size: 200%;
+  }
+
+}
