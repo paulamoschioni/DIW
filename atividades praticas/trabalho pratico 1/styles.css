@@ -513,6 +513,9 @@ transform: rotate(-4deg);
   #carrosselDestaques .carousel-item img{
     height: 240px;  /*carrossel mais baixo no celular*/
   }
+  .carousel-caption p{
+    display: none;  /*so o titulo no celular, para o texto nao passar da imagem*/
+  }
 
   .detalhe-banner{
     min-height: 260px;

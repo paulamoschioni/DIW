@@ -5,7 +5,7 @@ const dados = {
         id: 1,
         nome: "Eventos e Cursos",
         descricao: "Conferências, bootcamps e cursos pensados para mulheres que querem crescer na tecnologia.",
-        conteudo: "Participar de eventos e cursos é uma das maneiras mais rápidas de aprender, conhecer pessoas da área e descobrir oportunidades que não aparecem aozinhas. Muitos são gratuitos, online e feitos especialmente para mulheres.",
+        conteudo: "Participar de eventos e cursos é uma das maneiras mais rápidas de aprender, conhecer pessoas da área e descobrir oportunidades que não aparecem sozinhas. Muitos são gratuitos, online e feitos especialmente para mulheres.",
         imagemPrincipal: "https://img.odcdn.com.br/wp-content/uploads/2023/11/Destaque-Web-Summit-Lisboa-2023.jpg",
         publico: "Estudantes e profissionais mulheres em transição de carreira",
         comoAproveitar: "Escolha um evento por semestre e um curso curto por mês. Anote os contatos que fizer!"
@@ -44,7 +44,7 @@ const dados = {
             dicaId: 1,
             areaId: 1,
             titulo: "Women in Tech Global Conference",
-            descriçao: "Organizada pela WomenTech Network, é uma das maiores conferências internacionais de mulheres em tecnologia. O evento é híbrido, então dá para assistir online de qualquer lugar do mundo, com palestras sobre carreira, IA, desenvolvimento e liderança.",
+            descricao: "Organizada pela WomenTech Network, é uma das maiores conferências internacionais de mulheres em tecnologia. O evento é híbrido, então dá para assistir online de qualquer lugar do mundo, com palestras sobre carreira, IA, desenvolvimento e liderança.",
             imagem:"https://women-in-tech.org/wp-content/uploads/2024/06/womenintech-global-summit-2024-980x551.jpg",
             ref: "https://women-in-tech.org/women-in-tech-global-summit-2024/",
             destaque: true
@@ -53,7 +53,7 @@ const dados = {
             dicaId: 2,
             areaId: 1,
             titulo: "WoMakersCode: eventos e mentorias online",
-            descriçao: "A WoMakersCode promove eventos, workshops e programas de capacitação em tecnologia voltados para mulheres. Muitos são online e gratuitos, ótimos para aprender e fazer networking desde o início da faculdade.",
+            descricao: "A WoMakersCode promove eventos, workshops e programas de capacitação em tecnologia voltados para mulheres. Muitos são online e gratuitos, ótimos para aprender e fazer networking desde o início da faculdade.",
             imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmO8FzHOLz1FRvTy5ncNsatVVI06Z_Ru2CtBxEtmJbHYgW-X-pWmjx7Pk_&s=10", 
             ref: "https://www.womakerscode.org/",
             destaque: false
@@ -64,7 +64,7 @@ const dados = {
             dicaId: 3,
             areaId: 2,
             titulo: "Crie alertas de vaga no LinkedIn e na Gupy",
-            descriçao: "Muitas empresas brasileiras publicam seus programas de estágio na Gupy e no LinkedIn. Cadastre seu perfil, ative alertas com palavras como 'estágio desenvolvimento' ou 'estágio TI' e candidate-se assim que a vaga abrir — as primeiras inscrições costumam ser vistas antes.",
+            descricao: "Muitas empresas brasileiras publicam seus programas de estágio na Gupy e no LinkedIn. Cadastre seu perfil, ative alertas com palavras como 'estágio desenvolvimento' ou 'estágio TI' e candidate-se assim que a vaga abrir — as primeiras inscrições costumam ser vistas antes.",
             imagem: "https://img.odcdn.com.br/wp-content/uploads/2024/09/3.jpg",
             ref: null,
             destaque: false
@@ -74,9 +74,9 @@ const dados = {
             dicaId: 4,
             areaId: 2,
             titulo: "Google: Software Engineering Intern, BS, Summer 2027",
-            descriçao: "O Google abriu a vaga de estágio em Engenharia de Software para estudantes de graduação (BS) no verão de 2027. Quem é aprovada trabalha em projetos reais com mentoria de engenheiros do Google. Procure a vaga em google.com/about/careers e prepare currículo em inglês e treino de estruturas de dados e algoritmos.",
+            descricao: "O Google abriu a vaga de estágio em Engenharia de Software para estudantes de graduação (BS) no verão de 2027. Quem é aprovada trabalha em projetos reais com mentoria de engenheiros do Google. Procure a vaga em google.com/about/careers e prepare currículo em inglês e treino de estruturas de dados e algoritmos.",
             imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg8Z9GAQE-WGTQLAiisWAg9ZXtlJrnsmi573HEen3iCgPtUrQsaKgxdXs&s=10",
-            ref:"https://www.google.com/about/careers/applications/jobs/results/91436104816698054-software-engineering-intern-phd-summer-2027",
+            ref: "https://www.google.com/about/careers/applications/jobs/results/?q=software%20engineering%20intern",
             destaque: true
         },
 
@@ -85,7 +85,7 @@ const dados = {
             dicaId: 5,
             areaId: 3,
             titulo: "GitHub Student Developer Pack",
-            descriçao: "Com seu e-mail da universidade você pode solicitar o GitHub Student Developer Pack, que libera o GitHub Copilot, domínios, créditos em nuvem e várias ferramentas pagas de graça enquanto você for estudante.",
+            descricao: "Com seu e-mail da universidade você pode solicitar o GitHub Student Developer Pack, que libera o GitHub Copilot, domínios, créditos em nuvem e várias ferramentas pagas de graça enquanto você for estudante.",
             imagem: "https://media2.dev.to/dynamic/image/width=1200,height=627,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5bd1vk5smkab38um9fje.png",
             ref:"https://education.github.com/pack",
             destaque: true
@@ -95,7 +95,7 @@ const dados = {
             dicaId: 6,
             areaId: 3,
             titulo: "Figma gratuito para estudantes",
-            descriçao: "O Figma oferece o plano Education gratuito para estudantes. É ideal para prototipar telas de sites e apps antes de partir para o código, e ainda ajuda a montar um portfólio de UI/UX.",
+            descricao: "O Figma oferece o plano Education gratuito para estudantes. É ideal para prototipar telas de sites e apps antes de partir para o código, e ainda ajuda a montar um portfólio de UI/UX.",
             imagem: "https://wpdean.com/wp-content/uploads/2024/12/what-is-figma-used-for.jpg",
             ref: "https://www.figma.com/pt-br/",
             destaque: false
@@ -106,7 +106,7 @@ const dados = {
             dicaId: 7,
             areaId: 4,
             titulo: "Women Techmakers: a comunidade global do Google",
-            descriçao: "O Women Techmakers é um programa do Google que conecta mulheres em tecnologia no mundo todo. A comunidade tem embaixadoras em vários países, inclusive no Brasil, e promove eventos (como os do Dia Internacional da Mulher), workshops e oportunidades de networking e liderança.",
+            descricao: "O Women Techmakers é um programa do Google que conecta mulheres em tecnologia no mundo todo. A comunidade tem embaixadoras em vários países, inclusive no Brasil, e promove eventos (como os do Dia Internacional da Mulher), workshops e oportunidades de networking e liderança.",
             imagem: "https://www.opportunitiesforafricans.com/wp-content/uploads/2023/05/google-women-techmakers.jpg",
             ref: "https://www.technovation.org/women-techmakers",
             destaque: true
@@ -115,7 +115,7 @@ const dados = {
             dicaId: 8,
             areaId: 4,
             titulo: "TLDR: a newsletter diária de tecnologia",
-            descriçao: "A TLDR é uma das newsletters de tecnologia mais lidas do mundo. Todo dia ela manda um resumo curto, em inglês, das principais notícias de tech, programação e startups — leitura de 5 minutos. Tem também versões temáticas, como TLDR Web Dev e TLDR AI. Assine em tldr.tech.",
+            descricao: "A TLDR é uma das newsletters de tecnologia mais lidas do mundo. Todo dia ela manda um resumo curto, em inglês, das principais notícias de tech, programação e startups — leitura de 5 minutos. Tem também versões temáticas, como TLDR Web Dev e TLDR AI. Assine em tldr.tech.",
             imagem: "https://sponsy.nyc3.cdn.digitaloceanspaces.com/tina/media/case-studies/tldr-website.png",
             ref: "https://tldr.tech/",
             destaque: false
@@ -141,7 +141,7 @@ dicasDestaque.forEach((dica, indice) => {
                 </a>
                 <div class="carousel-caption">
                     <h3>${dica.titulo}</h3>
-                    <p>${dica.descriçao}</p>
+                    <p>${dica.descricao}</p>
                 </div>
             </div>
     `
@@ -185,7 +185,16 @@ function montarDetalhes() {
 
     const categoria = dados.categorias.find(cat => cat.id === id);                 // acha A categoria
     const dicasDaCategoria = dados.dicas.filter(dica => dica.areaId === id);       // acha AS dicas dela
-        const infoContainer = document.getElementById("info-categoria");
+    const infoContainer = document.getElementById("info-categoria");
+
+    // se o id nao existir (ou faltar na URL), mostra um aviso em vez de quebrar
+    if (!categoria) {
+        infoContainer.innerHTML = `
+            <p class="detalhe-conteudo">Categoria não encontrada.
+            <a href="index.html#categorias">Ver todas as categorias</a></p>`;
+        document.querySelector(".secao-dicas").style.display = "none";
+        return;
+    }
 
     infoContainer.innerHTML = `
         <!-- banner com a imagem da categoria de fundo -->
@@ -231,7 +240,7 @@ function montarDetalhes() {
                     <img src="${dica.imagem}" class="card-img-top" alt="${dica.titulo}">
                     <div class="card-body">
                         <h5 class="card-title">${dica.titulo}</h5>
-                        <p class="card-text">${dica.descriçao}</p>
+                        <p class="card-text">${dica.descricao}</p>
                         ${dica.ref ? `<a href="${dica.ref}" target="_blank" class="btn btn-primary">Acessar</a>` : ""}
                     </div>
                 </div>
