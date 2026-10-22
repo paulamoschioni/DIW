@@ -71,6 +71,15 @@ html{
 #cards-categorias .card{
     border-radius: 16px;
     overflow: hidden;   /*faz a imagem do topo seguir as bordas arredondadas*/
+    transition: transform 0.25s, box-shadow 0.25s, background-color 0.25s;   /*efeito suave*/
+}
+
+/*card fica em destaque ao passar o mouse*/
+#cards-categorias .card:hover{
+    transform: translateY(-6px);                     /*sobe um pouco*/
+    background-color: #d6ecf8;                       /*azul bebe*/
+    border-color: #a9d4ee;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);     /*sombra mais forte*/
 }
 
 #categorias{
@@ -463,7 +472,7 @@ transform: rotate(-4deg);
 /*SOBRE A AUTORA - carteirinha ao lado do texto*/
 .carteirinha{
     width: 100%;              /*ocupa toda a coluna*/
-    max-width: 340px;         /*limite para nao ficar gigante nem borrada*/
+    max-width: 520px;         /*carteirinha grande e legivel*/
     margin-bottom: 16px;      /*espaco quando a imagem fica em cima do texto no celular*/
 }
 
