@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Título da página -->
+    <h1>Catálogo de Filmes</h1>
+
+    <!-- Área de busca: campo de texto + botão para disparar a pesquisa -->
+    <div class="search-area">
+        <input id="search" placeholder="Buscar filme...">
+        <button id="btnSearch">Buscar</button>
+    </div>
+
+    <!-- Elemento para mensagens (carregando, erro ou vazio) -->
+    <p id="message"></p>
+
+    <!-- Container onde os cards dos filmes serão inseridos pelo JavaScript -->
+    <div id="movie-list"></div>
+
+    <!-- Importação do script no final do body -->
+    <script src="script.js"></script>
+</body>
+</html>
